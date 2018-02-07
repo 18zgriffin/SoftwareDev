@@ -5,7 +5,7 @@ l = (input("What is the year? "))
 j = int(l[0]+l[1])
 k = int(l[2]+l[3])
 
-if 1 or 2 in m:
+if m == 1 or m == 2:
     m = m + 12
     k = k - 1
 
