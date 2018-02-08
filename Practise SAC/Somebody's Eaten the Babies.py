@@ -8,7 +8,7 @@ yes = ""
 x = 1
 
 #tests if the gender is m or f and assign appropriate value to r
-while yes != "yesm" or yes != "yesf":
+while True:
     gender = input("What gender are you? (M or F) ")
     if gender == "M":
         r = 0.68
@@ -73,11 +73,11 @@ BAC = round((a/(r*w)*100-(v*time)),2)
 #tells the person their blood alchohol content and if using their licensing what kind of penalty for driving may incur
 if license == "L" or license == "P":
     if BAC > 0.00:
-        print("As a learner with a blood alchohol above 0.00 of", BAC, "your license would be cancelled and an interlock device required")
+        print("As a learner with a blood alchohol above 0.00 of", BAC, "your license would be cancelled and an interlock device required for 6 months after license is returned")
     else:
         print("Good job your blood alchohol is low enough at only", BAC)
 elif license == "FL":
     if BAC >= 0.05 and BAC <= 0.07:
         print("As a fully licensed driver with a blood alchohol between 0.05 and 0.07 equal to", BAC, "you will be fined and lose 10 demerit points")
     elif BAC > 0.07:
-        print("As a fully licensed driver with a blood alchohol above 0.07, equal to", BAC, "you will lose your license and will have to install a interlock device")
+        print("As a fully licensed driver with a blood alchohol above 0.07, equal to", BAC, "you will lose your license and will have to install a interlock device for 6 months after license is returned")
