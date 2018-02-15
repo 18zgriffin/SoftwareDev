@@ -25,6 +25,7 @@ while True:
     try:
         mass = int(input("How much do you weigh? "))
         type = input("Did you use Imperial(lb) or Metric(kg) ")
+
     except ValueError:
         print("You entered your mass incorrectly, try again")
     else:
