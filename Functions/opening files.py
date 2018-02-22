@@ -18,3 +18,18 @@ for line in f:
 
 #close file
 f.close()
+
+#open file for write
+f = open(fname, "a")
+
+#add a new line to the file
+f.write("\n")
+
+#write to file
+f.write(input("Add a new line to the bottom of the file: "))
+
+#close file
+f.close()
+import csv
+
+help(csv)
