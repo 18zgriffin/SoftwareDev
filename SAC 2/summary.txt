@@ -1,0 +1,140 @@
+OnSun5/03/2017
+     min temp: 13.6C
+     min temp: 27.0C
+     average temp: 20.44C
+Forecast:Dry and Comfortable
+OnMon6/03/2017
+     min temp: 13.8C
+     min temp: 26.7C
+     average temp: 20.49C
+Forecast:Dry and Comfortable
+OnTue7/03/2017
+     min temp: 14.7C
+     min temp: 30.3C
+     average temp: 22.75C
+Forecast:Very sticky and oppressive
+OnWed8/03/2017
+     min temp: 9.3C
+     min temp: 29.4C
+     average temp: 18.75C
+Forecast:Muggy
+OnThur9/03/2017
+     min temp: 14.0C
+     min temp: 38.0C
+     average temp: 24.76C
+Forecast:Muggy
+OnFri10/03/2017
+     min temp: 13.2C
+     min temp: 26.0C
+     average temp: 19.41C
+Forecast:Dry and Comfortable
+OnSat11/03/2017
+     min temp: 12.8C
+     min temp: 30.1C
+     average temp: 20.34C
+Forecast:Dry and Comfortable
+On Sun5/03/2017
+     min temp: 13.6C
+     min temp: 27.0C
+     average temp: 20.44C
+Forecast:Dry and Comfortable
+On Mon6/03/2017
+     min temp: 13.8C
+     min temp: 26.7C
+     average temp: 20.49C
+Forecast:Dry and Comfortable
+On Tue7/03/2017
+     min temp: 14.7C
+     min temp: 30.3C
+     average temp: 22.75C
+Forecast:Very sticky and oppressive
+On Wed8/03/2017
+     min temp: 9.3C
+     min temp: 29.4C
+     average temp: 18.75C
+Forecast:Muggy
+On Thur9/03/2017
+     min temp: 14.0C
+     min temp: 38.0C
+     average temp: 24.76C
+Forecast:Muggy
+On Fri10/03/2017
+     min temp: 13.2C
+     min temp: 26.0C
+     average temp: 19.41C
+Forecast:Dry and Comfortable
+On Sat11/03/2017
+     min temp: 12.8C
+     min temp: 30.1C
+     average temp: 20.34C
+Forecast:Dry and Comfortable
+On 15/03/2017
+     min temp: 13.6C
+     min temp: 27.0C
+     average temp: 20.44C
+Forecast:Dry and Comfortable
+On 26/03/2017
+     min temp: 13.8C
+     min temp: 26.7C
+     average temp: 20.49C
+Forecast:Dry and Comfortable
+On 37/03/2017
+     min temp: 14.7C
+     min temp: 30.3C
+     average temp: 22.75C
+Forecast:Very sticky and oppressive
+On 48/03/2017
+     min temp: 9.3C
+     min temp: 29.4C
+     average temp: 18.75C
+Forecast:Muggy
+On 59/03/2017
+     min temp: 14.0C
+     min temp: 38.0C
+     average temp: 24.76C
+Forecast:Muggy
+On 610/03/2017
+     min temp: 13.2C
+     min temp: 26.0C
+     average temp: 19.41C
+Forecast:Dry and Comfortable
+On 711/03/2017
+     min temp: 12.8C
+     min temp: 30.1C
+     average temp: 20.34C
+Forecast:Dry and Comfortable
+On Sun5/03/2017
+     min temp: 13.6C
+     min temp: 27.0C
+     average temp: 20.44C
+Forecast:Dry and Comfortable
+On Mon6/03/2017
+     min temp: 13.8C
+     min temp: 26.7C
+     average temp: 20.49C
+Forecast:Dry and Comfortable
+On Tue7/03/2017
+     min temp: 14.7C
+     min temp: 30.3C
+     average temp: 22.75C
+Forecast:Very sticky and oppressive
+On Wed8/03/2017
+     min temp: 9.3C
+     min temp: 29.4C
+     average temp: 18.75C
+Forecast:Muggy
+On Thur9/03/2017
+     min temp: 14.0C
+     min temp: 38.0C
+     average temp: 24.76C
+Forecast:Muggy
+On Fri10/03/2017
+     min temp: 13.2C
+     min temp: 26.0C
+     average temp: 19.41C
+Forecast:Dry and Comfortable
+On Sat11/03/2017
+     min temp: 12.8C
+     min temp: 30.1C
+     average temp: 20.34C
+Forecast:Dry and Comfortable
