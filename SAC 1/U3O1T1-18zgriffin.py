@@ -1,12 +1,20 @@
+from tkinter import *
 #function the coverts imperial height to metric height
-def convertHeight(heighti, heightf):
-    heightinMetres = ((heightf*12+heighti)*0.0254)
-    return(heightinMetres)
+def convertHeight(height):
+    if height[-1:] != '"':
+        height = "Error"
+    else:
+        height = (height[:-1].split("'"))
+        try:
+            height = ((float(height[0])*12+float(height[1]))*0.0254)
+        except:
+            height = "Error"
+    return(height)
 
 #function that converts imperial weight to metric weight
 def convertWeight(weight):
-    weightInKgs = (weight*0.45359237)
-    return(weightInKgs)
+    weight = (float(weight)*0.45359237)
+    return(weight)
 
 #function that calculates what BMI category someone is in
 def getBMIcategory(BMI):
@@ -20,51 +28,81 @@ def getBMIcategory(BMI):
         category = "Obese"
     return(category)
 
-#loop that validates your unit input either runs the convertion function or simply assigns metric values
-while True:
-    units = input("Would you like to enter your measurements in imperial(i) ir metric(m) units? ")
-    #checks if units is in imperial
-    if units == "i" or units == 'I':
-        #loop that makes sure the user inputs the values as floats
-        while True:
-            try:
-                heightf = float(input("What is your height? (Feet Value): "))
-                heighti = float(input("What is you height? (Inches Value): "))
-                weight = float(input("What is you weight? (lb's) "))
-                #checks if values entered are positive
-                if heightf > 0 and weight > 0 and heighti > 0:
-                    break
-                print("You entered your height or weight as a negative, try again")
-            except ValueError:
-                print("You input that value incorrectly, try again")
-        #performs the imperial to metric function conversion for height and weight
-        heightinMetres = (convertHeight(heighti, heightf))
-        weightInKgs = (convertWeight(weight))
-        break
-    #checks if units are in metric
-    elif units == "m" or units == 'M':
-        # loop that makes sure the user inputs the values as floats
-        while True:
-            try:
-                height = float(input("What is your height? (m's) "))
-                weight = float(input("What is you weight? (kg's) "))
-                #checks if values are positive
-                if height > 0 and weight > 0:
-                    break
-                print("You entered your height or weight as a negative, try again")
-            except ValueError:
-                print("You input that value incorrectly, try again")
-        #assigns the metric values to the calculation variables
-        heightinMetres = height
-        weightInKgs = weight
-        break
-    #tells user to try again as they did not enter m for metric or i for imperial
-    else:
-        print("You entered neither m or i, try again")
 
-#calculates the BMI
-BMI = round(weightInKgs/(heightinMetres**2),2)
+class ConversionGUI:
+    def __init__(self, master):
+        self.master = master
+        master.title("BMI Calculator")
 
-#calls the BMI category function and gets the BMI category then prints it with the calculated BMI
-category = getBMIcategory(BMI)
-print("You have a BMI of", BMI, "and are", category)
+        self.titleText = Label(master, text="BMI Calculator:", bg="blue", font=("Times", "24", "bold italic"), fg="red")
+        self.titleText.grid(columnspan = 2, row = 0)
+        self.titleText.grid()
+
+        self.radioSelect = DoubleVar()
+
+        self.radioI = Radiobutton(master, text='Imperial(lbs, Feet\'Inches\")', variable=self.radioSelect, value=0)
+        self.radioI.grid(column = 0, row = 1)
+
+        self.radioM = Radiobutton(master, text="Metric(kg, m)", variable=self.radioSelect, value=1)
+        self.radioM.grid(column = 1, row = 1)
+
+        self.feetLabel = Label(master, text="Enter your weight: ")
+        self.feetLabel.grid(column = 0, row = 3)
+        self.weight = StringVar()
+        self.entryValue = Entry(master, textvariable=self.weight)
+        self.entryValue.grid(row = 3, column = 1)
+
+        self.feetLabel = Label(master, text="Enter your height: ")
+        self.feetLabel.grid(column = 0, row = 4)
+        self.height = StringVar()
+        self.entryValue = Entry(master, textvariable=self.height)
+        self.entryValue.grid(row=4, column = 1)
+
+        self.calcButton = Button(master, text="Calculate", command=self.calculate)
+        self.calcButton.grid(row=7, column = 0)
+
+        self.resultLabel = Label(master, text="Result:")
+        self.resultLabel.grid(row = 5, column = 0)
+
+        self.result = DoubleVar()
+        self.resultValue = Label(master, textvariable=self.result)
+        self.result.set(0.0)
+        self.resultValue.grid(row = 5, column=1)
+
+
+        self.categoryLabel = Label(master, text="Category:")
+        self.categoryLabel.grid(row = 6, column = 0)
+
+        self.category = DoubleVar()
+        self.categoryValue = Label(master, textvariable=self.category)
+        self.category.set("None")
+        self.categoryValue.grid(row=6, column=1)
+
+        self.close_button = Button(master, text="Close", command=master.quit)
+        self.close_button.grid(row=7, column=1)
+
+    def calculate(self):
+        height = self.height.get()
+        weight = self.weight.get()
+        if not(self.radioSelect.get()):
+            try:
+                height = convertHeight(height)
+                weight = convertWeight(weight)
+                result = round(weight / (height ** 2), 2)
+                category = getBMIcategory(result)
+                self.category.set(category)
+            except TypeError:
+                result = "Error"
+        elif self.radioSelect.get():
+            try:
+                result = round(float(weight) / (float(height) ** 2), 2)
+                category = getBMIcategory(result)
+                self.category.set(category)
+            except:
+                result = "Error"
+        self.result.set(result)
+        return
+
+root = Tk()
+gui = ConversionGUI(root)
+root.mainloop()
